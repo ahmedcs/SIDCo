@@ -18,7 +18,7 @@ For more details about the algorithm, please refer to our papers.
 - [Horovod-0.14.+](https://github.com/horovod/horovod)
 ### Quick Start
 
-##Install software
+## Install software
 ```
 pip install pytorch=1.3 openmpi=4.0
 https://github.com/horovod/horovod
@@ -27,7 +27,7 @@ git checkout tags/0.18 -b master
 HOROVOD_GPU_ALLREDUCE=NCCL pip install --no-cache-dir horovod (optional if horovod has been installed)
 ```
 
-##Install dependencies
+## Install dependencies
 ```
 pip install -r requirements.txt    #all python libraries including pytorch and openmpi
 
@@ -42,7 +42,7 @@ cd ../pytorch_binding
 python setup.py install
 ```
 
-##Running the experiments
+## Running the experiments
 ```
 git clone https://github.com/ahmedcs/sidco.git
 cd sidco
@@ -52,7 +52,7 @@ Assume that you have 8 nodes with 1 GPUs each (update the file clusters/cluster8
 
 Before running the experiment, please make sure the datasets are downloaded and the path to data_dir is properly set in exp_configs folder which contain a config file for each DNN model.
 
-##Running the benchmark experiments
+## Running the benchmark experiments
 Generate the gradient vectors of different iterations and store them as a numpy array (.npy) in the grads folder. Check the naming in the run_microbench.sh file of the files or update them accordingly.
 Then, run the run_microbench.sh script to get microbenchmark results both on CPU and GPU for various gradients stored in the grads folder. 
 There is also a microbenchmark that does not require pre-generation of the gradients vector as it relies on synthetic vectors which can be ran using run_microbench_randn.sh.
